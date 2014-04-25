@@ -1,0 +1,8 @@
+html.bg-dornier body {
+    background: url("../images/presentation/zuehlke_dornier.jpg");
+}
+span#zuehlke-header:before {
+    content: "Demo - ";
+    font-weight: normal;
+    color: #dddddd;
+}
