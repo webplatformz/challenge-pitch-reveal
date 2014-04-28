@@ -1,0 +1,49 @@
+div.zuehlke-center {
+    
+    left: 0;
+
+}
+
+/*********************************************
+ * ZUEHLKE SPLASH
+ *********************************************/
+
+section.zuehlke-bg {
+
+    background: url("../../images/presentation/lake.jpg");
+
+    background-size: auto 100%;
+
+    background-repeat: no-repeat;
+    
+}
+
+section.bg-one-right {
+
+    background-position: -40px 0;
+
+}
+
+section.bg-two-right {
+
+    background-position: -80px 0;
+
+}
+
+section.bg-three-right {
+
+    background-position: -120px 0;
+
+}
+
+section.bg-four-right {
+
+    background-position: -160px 0;
+
+}
+
+section.orange {
+
+    background-color: #FE6100;
+
+}

@@ -1,6 +1,13 @@
 Reveal.addEventListener('ready', function (event) {
-
+    if(isPrintingMode()) {
+        drawCharts();   
+        drawZuehlkeBgForPrinting();
+    }
 });
+
+var isPrintingMode = function() {
+    return window.location.search.match(/print-pdf/gi);
+};
 
 var createMobileDevicesChart = function () {
     var mobileDeviceDistributionData = {
@@ -15,10 +22,6 @@ var createMobileDevicesChart = function () {
     };
 
     var mobileDeviceOptions = {
-        /* scaleOverride: true,
-        scaleSteps: 12,
-        scaleStepWidth: 1000,
-        scaleStartValue: 0, */
         animationSteps: 80
     };
 
@@ -55,8 +58,14 @@ var createDesktopMobileDistributionChart = function () {
 var drawCharts = function () {
     createMobileDevicesChart();
     createDesktopMobileDistributionChart();
-}
+};
 
+var drawZuehlkeBgForPrinting = function() {
+    var zuehlkeBgSlides = document.querySelectorAll('[data-state]');
+    for (var i=0; i < zuehlkeBgSlides.length; i++){
+        zuehlkeBgSlides[i].className =  zuehlkeBgSlides[i].className + " " + zuehlkeBgSlides[i].getAttribute("data-state"); 
+    }
+};
 
 Reveal.addEventListener('slidechanged', function () {
     drawCharts();
