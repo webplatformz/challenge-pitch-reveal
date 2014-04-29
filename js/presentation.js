@@ -2,6 +2,7 @@ Reveal.addEventListener('ready', function (event) {
     if(isPrintingMode()) {
         drawCharts();   
         drawZuehlkeBgForPrinting();
+        drawHeaderForPrinting();
     }
 });
 
@@ -66,6 +67,22 @@ var drawZuehlkeBgForPrinting = function() {
         zuehlkeBgSlides[i].className =  zuehlkeBgSlides[i].className + " " + zuehlkeBgSlides[i].getAttribute("data-state"); 
     }
 };
+
+var drawHeaderForPrinting = function() {
+    
+    var zuehlkeSlidesWithTitle = document.querySelectorAll('[data-title]');
+    for (var i=0; i < zuehlkeSlidesWithTitle.length; i++){
+        console.log('print header...' +  zuehlkeSlidesWithTitle.length);
+        var slideTitle = zuehlkeSlidesWithTitle[i].getAttribute("data-title");
+        var printHeader = document.getElementById("zuehlke-header").cloneNode(true);
+        printHeader.setAttribute('id', '');
+        printHeader.setAttribute('class', 'zuehlke-header print');
+        printHeader.innerHTML = zuehlkeSlidesWithTitle[i].getAttribute("data-title");
+        zuehlkeSlidesWithTitle[i].insertBefore(printHeader, zuehlkeSlidesWithTitle[i].firstChild);
+    }
+};
+
+
 
 Reveal.addEventListener('slidechanged', function () {
     drawCharts();
