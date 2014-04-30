@@ -17,6 +17,10 @@ Explain what lies where and show concept of dividing zuehlke-theme and presentat
 
 How to use; Title on subsections; "before" css magic;
 
+### Chart
+
+Using pie, bar and other fancy charts
+
 ### Print
 
 How does printing work with suffix. FF has a checkbox for background images... just if you want those :-)
