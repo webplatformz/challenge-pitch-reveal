@@ -11,7 +11,11 @@ Reveal.addEventListener('slidechanged', function (event) {
     }
     var parallaxStep = event.currentSlide.attributes.getNamedItem('data-parallax-step');
     if (parallaxStep) {
-        var backgroundXDelta = parallaxStep.value * 200;
+        var parallaxOffset = 100;
+        if (typeof zuehlkeParralaxOffset != 'undefined') {
+            parallaxOffset = zuehlkeParralaxOffset;
+        }
+        var backgroundXDelta = parallaxStep.value * parallaxOffset;
         document.body.style.backgroundPosition = "-" + backgroundXDelta + "px 0";
     } else {
         document.body.style.backgroundPosition = "";

@@ -392,42 +392,6 @@ html.zuehlke-bg body {
 
 }
 
-html.bg-one-right body {
-
-    background-position: 0 0;
-
-}
-
-html.bg-two-right body {
-
-    background-position: -200px 0;
-
-}
-
-html.bg-three-right body {
-
-    background-position: -400px 0;
-
-}
-
-html.bg-four-right body {
-
-    background-position: -600px 0;
-
-}
-
-html.bg-five-right body {
-
-    background-position: -800px 0;
-
-}
-
-html.bg-six-right body {
-
-    background-position: -1000px 0;
-
-}
-
 html.zuehlke-bg body div.zuehlke-splash-title {
 
     font-size: 1.5em;

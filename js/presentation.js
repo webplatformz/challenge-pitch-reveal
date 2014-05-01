@@ -1,12 +1,14 @@
+var zuehlkeParralaxOffset = 200;
+
 Reveal.addEventListener('ready', function (event) {
-    if(isPrintingMode()) {
-        drawCharts();   
+    if (isPrintingMode()) {
+        drawCharts();
         drawZuehlkeBgForPrinting();
         drawHeaderForPrinting();
     }
 });
 
-var isPrintingMode = function() {
+var isPrintingMode = function () {
     return window.location.search.match(/print-pdf/gi);
 };
 
@@ -61,18 +63,18 @@ var drawCharts = function () {
     createDesktopMobileDistributionChart();
 };
 
-var drawZuehlkeBgForPrinting = function() {
+var drawZuehlkeBgForPrinting = function () {
     var zuehlkeBgSlides = document.querySelectorAll('[data-state]');
-    for (var i=0; i < zuehlkeBgSlides.length; i++){
-        zuehlkeBgSlides[i].className =  zuehlkeBgSlides[i].className + " " + zuehlkeBgSlides[i].getAttribute("data-state"); 
+    for (var i = 0; i < zuehlkeBgSlides.length; i++) {
+        zuehlkeBgSlides[i].className = zuehlkeBgSlides[i].className + " " + zuehlkeBgSlides[i].getAttribute("data-state");
     }
 };
 
-var drawHeaderForPrinting = function() {
-    
+var drawHeaderForPrinting = function () {
+
     var zuehlkeSlidesWithTitle = document.querySelectorAll('[data-title]');
-    for (var i=0; i < zuehlkeSlidesWithTitle.length; i++){
-        console.log('print header...' +  zuehlkeSlidesWithTitle.length);
+    for (var i = 0; i < zuehlkeSlidesWithTitle.length; i++) {
+        console.log('print header...' + zuehlkeSlidesWithTitle.length);
         var slideTitle = zuehlkeSlidesWithTitle[i].getAttribute("data-title");
         var printHeader = document.getElementById("zuehlke-header").cloneNode(true);
         printHeader.setAttribute('id', '');
