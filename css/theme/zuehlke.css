@@ -380,16 +380,7 @@ div.zuehlke-splash-title {
 
 }
 
-body.print-pdf section.zuehlke-bg-sidney{
-    /*Make sure paralax background is visible when print mode is active*/
-    background: url("../../images/presentation/sidney_night.jpg");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-}
-
-html.zuehlke-bg-sidney body {
-
-    background: url("../../images/presentation/sidney_night.jpg");
+html.zuehlke-bg-parallax body {
 
     background-size: auto 100%;
 
@@ -399,7 +390,7 @@ html.zuehlke-bg-sidney body {
 
 }
 
-html.zuehlke-bg-sidney body div.zuehlke-splash-title {
+html.zuehlke-bg-parallax body div.zuehlke-splash-title {
 
     font-size: 1.5em;
 
