@@ -21,9 +21,19 @@ How to use; Title on subsections; "before" css magic;
 
 Using pie, bar and other fancy charts
 
-### Print
+### PDF Export
 
-How does printing work with suffix. FF has a checkbox for background images... just if you want those :-)
+Your presentations can be exported to PDF via a special print stylesheet. This feature requires that you use [Google Chrome](http://google.com/chrome).
+Printing on FF might need specific settings for each page and background-images have to be checked if they should appear on the slides.
+
+For printing parallax slides see section [Parallax Background](#Paralax Background)
+
+1. Open your presentation with the url parameter ``?print-pdf``
+2. Open the in-browser print dialog (CMD+P).
+3. Change the **Destination** setting to **Save as PDF**.
+4. Change the **Layout** to **Landscape**.
+5. Change the **Margins** to **None**.
+6. Click **Save**.
 
 ### Paralax Background
 

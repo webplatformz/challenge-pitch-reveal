@@ -14,18 +14,8 @@ span.zuehlke-header.print{
  * ZUEHLKE SPLASH
  *********************************************/
 
-section.zuehlke-bg {
-
-    background: url("../../images/presentation/lake.jpg");
-
-    background-size: auto 100%;
-
-    background-repeat: no-repeat;
-    
-}
-
 .reveal .slides section {
-    padding-left: 0px !important;
+    padding-left: 40px !important;
     padding-right: 0px !important;
 }
 
