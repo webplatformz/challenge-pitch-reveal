@@ -36,16 +36,16 @@ For printing parallax slides see section [Parallax Background](#paralax-backgrou
 
 ### Paralax Background
 
-This nice effect with moving backgroundimages can be achieved in 2 ways:
+This nice effect with moving background images can be achieved in 2 ways:
 
 ###### Option 1
 Use the default mode from the reveal project [revealjs framework](https://github.com/hakimel/reveal.js/) (see README -> Parallax Background)
 
 ###### Option 2
-Use the custom styling from zuehlke template. This will scale the image to the window size. On the downside you have to enter the px amount which should be moved after each slide.
+Use the custom styling from the zuehlke template. This will scale the image to the window size. On the downside you have to enter the px amount which should be moved after each slide.
 
-Edit ```presentation.js``` and change ```var zuehlkeParralaxOffset = 200;```. This will override the default 100px value.
-Edit ```presentation.css```. Below is the demo example... change to fit your needs:
+Edit ```presentation.js``` and change ```var zuehlkeParralaxOffset = 200;```. This will override the default 100px value.  
+Edit ```presentation.css```. Below is the demo example... change to fit your needs:  
 ```html
 html.zuehlke-bg-parallax body {
     background-image: url("../images/presentation/sidney_night.jpg");
