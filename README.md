@@ -28,7 +28,7 @@ Printing on FF might need specific settings for each page and background-images 
 
 For printing parallax slides see section [Parallax Background](#paralax-background)
 
-1. Open your presentation with the url parameter ``?print-pdf``
+1. Open your presentation with the url parameter ```?print-pdf```
 2. Open the in-browser print dialog (CMD+P).
 3. Change the **Destination** setting to **Save as PDF**.
 5. Change the **Margins** to **None**.
@@ -44,8 +44,8 @@ Use the default mode from the reveal project [revealjs framework](https://github
 Option 2
 Use the custom styling from zuehlke template. This will scale the image to the window size. On the downside you have to enter the px amount which should be moved after each slide.
 
-Edit ''presentation.js'' and add ''var zuehlkeParralaxOffset = 200;''. This will override the default 100px value.
-Edit ''presentation.css''. Below is the demo example... change to fit your needs:
+Edit ```presentation.js``` and change ```var zuehlkeParralaxOffset = 200;```. This will override the default 100px value.
+Edit ```presentation.css```. Below is the demo example... change to fit your needs:
 ```html
 html.zuehlke-bg-parallax body {
     background-image: url("../images/presentation/sidney_night.jpg");
