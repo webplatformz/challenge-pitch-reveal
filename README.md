@@ -34,7 +34,7 @@ For printing parallax slides see section [Parallax Background](#paralax-backgrou
 5. Change the **Margins** to **None**.
 6. Click **Save**.
 
-### Paralax Background
+### Parallax Background
 
 This nice effect with moving background images can be achieved in 2 ways:
 
