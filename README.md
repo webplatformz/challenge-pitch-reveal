@@ -12,14 +12,97 @@ A demo presentation for zuehlke based on the [revealjs framework](https://github
 ### File Structure
 
 Explain what lies where and show concept of dividing zuehlke-theme and presentation stuff
+#### index.html
+The presentation content is in the index.html. Each section defines a slide.
+
+#### js/presentation.js
+In this file you can implement your presentation specific JavaScript like chartjs, animations, custom slide-actions...
+
+#### css/presentation.css
+All the presentation specific stylings belongs to the presentation.css.
+In this file you have to adjust the presentation title. For further information see Chapter "Zuehlke Header".
+
+#### css/theme/zuehlke.css
+There are several themes (check all out at [revealjs framework](https://github.com/hakimel/reveal.js/)) and also a zuehlke theme. This is activated per default. You shouldn't have to make changes to this file, but you can discover several helper classes which you can use in your presentation.
 
 ### Zuehlke Header
 
-How to use; Title on subsections; "before" css magic;
+With the zuehlke theme you can set a header with title and logo with data-title attribute.
+
+To adjust the presentation title (per default "Demo") you have to make changes to the presentation.css:
+```
+span#zuehlke-header:before { 
+    content: "Demo - "; /*change presentation title here*/
+    font-weight: normal; 
+    color: #dddddd; 
+}
+```
+
+If you define a slide specific title with data-title="My Slide" then it shows the "Demo - My Slide" text in the header right next to the zuehlke logo.
+If you do not want any titlea and header you only have to remove the data-title attribute and the zuehlke logo and title will disappear.
 
 ### Chart
 
-Using pie, bar and other fancy charts
+Using pie, bar and other fancy charts.
+
+First you have to define a canvas for the drawing area in the index.html
+```
+<canvas height="400px" width="900px" id="canvasId"></canvas>
+```
+It's important to set a height and width. This canvas is referenced in the presentation.js for the chart initialization and darwings.
+
+#### Pie
+```     
+var chartData = [
+    {
+        value: 69,
+        color: "rgba(45,144,236,1)",
+        label: "Desktop",
+        labelColor: "white"
+    },
+    {
+        value: 22,
+        color: "rgba(45,144,236,0.7)",
+        label: "Phone",
+        labelColor: "white"
+    },
+    {
+        value: 9,
+        color: "rgba(45,144,236,0.5)",
+        label: "Tablet",
+        labelColor: "white"
+    }
+];
+
+
+var chartContext = document.getElementById("canvasId").getContext("2d");
+var chart = new Chart(chartContext).Pie(chartData);
+    
+```
+
+#### Bar
+```
+var chartData = {
+    labels: ["IPhone", "IPad", "Galaxy S4", "Galaxy S3"],
+    datasets: [
+        {
+            fillColor: "rgba(45,144,236,0.7)",
+            strokeColor: "rgba(45,144,236,1)",
+            data: [630200, 371500, 59500, 46000]
+        }
+    ]
+};
+
+var chartOptions = {
+    animationSteps: 80
+};
+
+var chartContext = document.getElementById("canvasId").getContext("2d");
+var mobileDeviceChart = new Chart(chartContext).Bar(chartData, chartOptions);
+```
+
+#### Further Information
+For further information and other charts [see chartjs.org](http://www.chartjs.org/). 
 
 ### PDF Export
 
