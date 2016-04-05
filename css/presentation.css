@@ -2,7 +2,7 @@ html.bg-dornier body {
     background: url("../images/presentation/lake_large.jpg");
 }
 span.zuehlke-header:before {
-    content: "Demo - ";
+    content: "Jass-Challenge - ";
     font-weight: normal;
     color: #dddddd;
 }

@@ -51,6 +51,10 @@ body {
 
 }
 
+pre.no-shadow {
+    box-shadow: none;
+}
+
 ::selection {
 
     color: white;
