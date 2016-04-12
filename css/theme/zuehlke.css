@@ -55,6 +55,11 @@ pre.no-shadow {
     box-shadow: none;
 }
 
+.text-highlight {
+    color: #FE6100;
+    font-weight: bold;
+}
+
 ::selection {
 
     color: white;

@@ -80,8 +80,8 @@
                 <h2 style="color: white">Techstack</h2>
 
                 <div class="zuehlke-center">
-                    <div class="zuehlke-splash-subtitle">ES6</div>
                     <div class="zuehlke-splash-subtitle">Node</div>
+                    <div class="zuehlke-splash-subtitle">ES6</div>
                     <div class="zuehlke-splash-subtitle">Websockets</div>
                     <div class="zuehlke-splash-subtitle">Mocha</div>
                     <div class="zuehlke-splash-subtitle">React</div>
@@ -89,16 +89,112 @@
             </section>
         </section>
 
-        <section data-title="How it works">
-            <h2>API</h2>
+        <section data-title="How it works" class='left'>
+            <section>
+                <p>
+                    Ein <span class="text-highlight">NodeJS</span> Server erlaubt es Bots, die in beliebiger Programmiersprache
+                    geschrieben sind, sich mit <span class="text-highlight">Websockets</span> zu verbinden und gegeneinander zu Jassen.
+                </p>
+            </section>
+            <section>
+                <p>
+                   Der Server kommuniziert mit den Bots über das vordefinierte <span class="text-highlight">Protokoll</span>.
+                </p>
 
-            <pre class="no-shadow">
+                <p>Bot, what is your name?</p>
+                <pre class="no-shadow">
                 <code data-trim contenteditable>
 {
     "type" : "REQUEST_PLAYER_NAME"
 }
                 </code>
             </pre>
+                <p>Here are your cards. Good luck.</p>
+                 <pre class="no-shadow">
+                <code data-trim contenteditable>
+{
+    "type" : "DEAL_CARDS",
+    "data" : [{
+        "number" : 13,
+        "color" : "SPADES"
+    }, {
+        "number" : 9,
+        "color" : "DIAMONDS"
+    },
+    ...
+    ]
+}
+                </code>
+            </pre>
+            </section>
+        </section>
+
+        <section data-state='orange'>
+            <section>
+                <h2 style="color: white">Why JavaScript?</h2>
+
+                <div class="zuehlke-center">
+                    <div class="zuehlke-splash-subtitle">NodeJS</div>
+                    <div class="zuehlke-splash-subtitle">NPM</div>
+                    <div class="zuehlke-splash-subtitle">ES6</div>
+                </div>
+            </section>
+        </section>
+
+        <section data-title="NodeJS" class='left'>
+            <section>
+                <h2>NodeJS</h2>
+                <p>
+                    Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
+                </p>
+            </section>
+            <section>
+                <p>
+                    <h2>Quick setup, easy to use</h2>
+                <pre class="no-shadow">
+                <code data-trim contenteditable>
+const http = require('http')
+
+const hostname = '127.0.0.1'
+const port = 3000
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'text/plain')
+    res.end('Hello World\n')
+});
+
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`)
+});
+                </code>
+            </pre>
+                </p>
+            </section>
+        </section>
+
+        <section data-title="NPM" class='left'>
+            <section>
+                <h2>NPM</h2>
+                <p>
+                    The package manager for JavaScript.
+                </p>
+            </section>
+        </section>
+
+        <section data-state='orange'>
+            <section>
+                <h2 style="color: white">Writing Bots</h2>
+                <div class="zuehlke-splash-subtitle">Demo</div>
+            </section>
+        </section>
+
+        <section data-state='orange'>
+            <section>
+                <h2 style="color: white">Jass - Challenge</h2>
+                <div class="zuehlke-splash-subtitle">Hackathon</div>
+                <div class="zuehlke-splash-subtitle">04.05.2016</div>
+            </section>
         </section>
 
         <section data-background="images/presentation/lake_large.jpg">
