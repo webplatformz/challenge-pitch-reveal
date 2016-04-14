@@ -65,6 +65,14 @@
                 <div style="margin-top: 10px; font-size: 0.6em">Patrick Walther &amp; Nick Payne</div>
             </div>
         </section>
+        
+        <section data-state='orange'>
+            <section>
+                <div class="zuehlke-center">
+                    <div class="zuehlke-splash-title">Who we are</div>
+                </div>
+            </section>
+        </section>
 
         <section data-state='orange'>
             <section>
@@ -394,12 +402,6 @@ server.listen(port, hostname, () => {
             }
         }, {
             src: 'plugin/chart/chart.js',
-            async: false,
-            condition: function () {
-                return true;
-            }
-        }, {
-            src: 'js/presentation.js',
             async: false,
             condition: function () {
                 return true;
