@@ -454,9 +454,12 @@ div.zuehlke-zuerfel {
 }
 
 html.orange .state-background {
-
     background-color: #FE6100;
 
+}
+
+html.blue .state-background {
+    background-color: #00D7FE
 }
 
 ul.zuehlke-disc li {
