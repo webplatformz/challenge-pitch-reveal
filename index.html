@@ -197,22 +197,32 @@
                     basicall just text
                 </aside>
             </section>
-            <section>
-                <h2 style="color: white">Example JSON</h2>
-                <div class="zuehlke-center">
-                    <pre class="no-shadow">
-                    <code data-trim contenteditable>
+            <section style="color: white">
+                <p>Bot, what is your name?</p>
+                <pre class="no-shadow">
+                <code data-trim contenteditable>
 {
-    "type" : "CHOOSE_SESSION",
-    "data" : {
-        "sessionChoice" : "CREATE_NEW",
-        "sessionName" : "Session 1",
-        "sessionType" : "SINGLE_GAME"
-    }
+    "type" : "REQUEST_PLAYER_NAME"
 }
-                    </code>
-                    </pre>
-                </div>
+                </code>
+            </pre>
+                <p>Here are your cards. Good luck.</p>
+                 <pre class="no-shadow">
+                <code data-trim contenteditable>
+{
+    "type" : "DEAL_CARDS",
+    "data" : [{
+        "number" : 13,
+        "color" : "SPADES"
+    }, {
+        "number" : 9,
+        "color" : "DIAMONDS"
+    },
+    ...
+    ]
+}
+                </code>
+            </pre>
             </section>
         </section>
 
@@ -244,88 +254,6 @@
                     <source src="vids/JassChallenge.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-            </section>
-        </section>
-
-        <section data-title="How it works" class='left'>
-            <section>
-                <p>
-                    A <span class="text-highlight">NodeJS</span> server allows bots, written in any language, to connect by websockets and play against eachother.
-                </p>
-                <p>
-                    The server communicates with the bots using a well defined <span class="text-highlight">protocol</span>.
-                </p>
-            </section>
-            <section>
-                <p>Bot, what is your name?</p>
-                <pre class="no-shadow">
-                <code data-trim contenteditable>
-{
-    "type" : "REQUEST_PLAYER_NAME"
-}
-                </code>
-            </pre>
-                <p>Here are your cards. Good luck.</p>
-                 <pre class="no-shadow">
-                <code data-trim contenteditable>
-{
-    "type" : "DEAL_CARDS",
-    "data" : [{
-        "number" : 13,
-        "color" : "SPADES"
-    }, {
-        "number" : 9,
-        "color" : "DIAMONDS"
-    },
-    ...
-    ]
-}
-                </code>
-            </pre>
-            </section>
-        </section>
-
-        <section data-state='orange'>
-            <section>
-                <h2 style="color: white">Why JavaScript?</h2>
-
-                <div class="zuehlke-center">
-                    <div class="zuehlke-splash-subtitle">NodeJS</div>
-                    <div class="zuehlke-splash-subtitle">NPM</div>
-                    <div class="zuehlke-splash-subtitle">ES6</div>
-                </div>
-            </section>
-        </section>
-
-        <section data-title="NodeJS" class='left'>
-            <section>
-                <h2>NodeJS</h2>
-                <p>
-                    Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
-                </p>
-            </section>
-            <section>
-                <p>
-                    <h2>Quick setup, easy to use</h2>
-                <pre class="no-shadow">
-                <code data-trim contenteditable>
-const http = require('http')
-
-const hostname = '127.0.0.1'
-const port = 3000
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'text/plain')
-    res.end('Hello World\n')
-});
-
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`)
-});
-                </code>
-            </pre>
-                </p>
             </section>
         </section>
 
@@ -398,145 +326,34 @@ function onRequestCard() {
                 </section>
         </section>
 
-        <section data-state='orange'>
-            <section>
-                <h2 style="color: white">Jass - Challenge</h2>
-                <div class="zuehlke-splash-subtitle">Hackathon</div>
-                <div class="zuehlke-splash-subtitle">04.05.2016</div>
-            </section>
-        </section>
-
-        <section data-background="images/presentation/lake_large.jpg">
-            <div class="zuehlke-center">
-                <div class="zuehlke-splash-title">Splash with full bg image</div>
-            </div>
-        </section>
-
-        <section data-title="First Page with Header" class='left'>
-            <h2>Lorem ipsum</h2>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore
-                magna aliqua.
-            </p>
-
-            <p>
-                    <pre>
-                        <code data-trim contenteditable>
-                            &lt;section data-title="First Page with Header" class='left'&gt;
-                        </code>
-                    </pre>
-            </p>
-            <p>
-                presentation.css:
-                    <pre>
-                        <code data-trim contenteditable>
-                            span#zuehlke-header:before { content: "Demo - "; font-weight: normal; color: #dddddd; }
-                        </code>
-                    </pre>
-            </p>
-        </section>
-        <section>
-            <h2>Print your presentation</h2>
-
-            <p>This is easy: use the suffix
-                <a href="?print-pdf">?print-pdf</a>&nbsp;in the address bar to enter print mode</p>
-        </section>
-
-        <section data-title="Simple Page with speaker notes">
-            <h2>Speaker notes</h2>
-
-            <p>
-                Press 's' on the keyboard
-            </p>
-            <aside class="notes">
-                Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open
-                the speaker notes window (hit 's' on your keyboard).
-            </aside>
-        </section>
-
-        <section data-title="Image with shadow">
-            <p>Image with nice shadow effect:</p>
-
-            <p>
-                <img src="images/presentation/wtf.gif" class="shadow"/>
-            </p>
-                <pre>
-                    <code data-trim contenteditable>
-                        <img src="images/presentation/wtf.gif" class="shadow"/>
-                    </code>
-                </pre>
-        </section>
-
-        <!-- Example of nested vertical slides -->
-        <section>
-            <section>
-                <h2>Vertical Slides</h2>
-
-                <p>
-                    Slides can be nested inside of other slides, try pressing
-                    <a href="#" class="navigate-down">down</a>.
-                </p>
-                <a href="#" class="image navigate-down">
-                    <img width="178" height="238" src="images/arrow.png" alt="Down arrow">
-                </a>
-            </section>
-            <section>
-                <h2>Basement Level 1</h2>
-
-                <p>Press down or up to navigate.</p>
-            </section>
-            <section>
-                <h2>Basement Level 2</h2>
-
-                <p>That's it, time to go back up.</p>
-                <a href="#/2" class="image">
-                    <img width="178" height="238" src="images/arrow.png" alt="Up arrow"
-                         style="-webkit-transform: rotate(180deg);">
-                </a>
-            </section>
-        </section>
-        <section>
-            <h2>Point of View</h2>
-
-            <p>
-                Press
-                <strong>ESC</strong>to enter the slide overview.
-            </p>
-
-            <p>
-                Hold down alt and click on any element to zoom in on it using
-                <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-            </p>
-        </section>
         <section data-transition="linear" data-state="zuehlke-bg-parallax" data-parallax-step=0>
             <div class="zuehlke-center">
-                <div class="zuehlke-splash-title">Splash with full bg image</div>
+                <div class="zuehlke-splash-title">Jass - Challenge Hackathon</div>
             </div>
         </section>
         <section data-transition="linear" data-state="zuehlke-bg-parallax" data-parallax-step=1>
             <div class="zuehlke-center">
-                <div class="zuehlke-splash-title">Splash with full bg image</div>
+                <div class="zuehlke-splash-title">04.05.2016</div>
             </div>
         </section>
         <section data-transition="linear" data-state="zuehlke-bg-parallax" data-parallax-step=2>
             <div class="zuehlke-center">
-                <div class="zuehlke-splash-title">Splash with full bg image</div>
+                <div class="zuehlke-splash-title">Beer &amp; Pizza</div>
             </div>
         </section>
         <section data-transition="linear" data-state="zuehlke-bg-parallax" data-parallax-step=3>
             <div class="zuehlke-center">
-                <div class="zuehlke-splash-title">Splash with full bg image</div>
+                <div class="zuehlke-splash-title">2 GoPro Hero 4</div>
             </div>
         </section>
         <section data-transition="linear" data-state="zuehlke-bg-parallax" data-parallax-step=4>
             <div class="zuehlke-center">
-                <div class="zuehlke-splash-title">Splash with full bg image</div>
+                <div class="zuehlke-splash-title">Interested?</div>
             </div>
         </section>
         <section data-transition="linear" data-state="zuehlke-bg-parallax" data-parallax-step=5>
             <div class="zuehlke-center">
-                <div class="zuehlke-splash-title">THE END</div>
+                <div class="zuehlke-splash-title">URL to Google Doodle style dingens</div>
             </div>
         </section>
     </div>
