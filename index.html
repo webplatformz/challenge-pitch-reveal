@@ -65,7 +65,7 @@
                 <div style="margin-top: 10px; font-size: 0.6em">Patrick Walther &amp; Nick Payne</div>
             </div>
         </section>
-        
+
         <section>
             <section>
                 <div class="zuehlke-center" style="margin-top: 30px;">
@@ -106,7 +106,7 @@
                 </aside>
             </section>
         </section>
-        
+
         <section style="color: white" data-state='orange'>
             <section>
                 <h2 style="color: white">What do we need?</h2>
@@ -122,7 +122,7 @@
             </section>
             <section>
                 <h2 style="color: white">Connectivity</h2>
-                
+
                 <ul>
                     <li>JavaScript, Java, C#, Haskell ...</li>
                     <li>Well defined API</li>
@@ -130,7 +130,7 @@
             </section>
             <section>
                 <h2 style="color: white">GUI</h2>
-                
+
                 <ul>
                     <li>Play against Players or Bots</li>
                     <li>Watch games of Bots slowed down</li>
@@ -180,14 +180,14 @@
                 </aside>
             </section>
         </section>
-        
+
         <section data-state='orange'>
             <section>
                 <h2 style="color: white">Connectivity</h2>
 
             </section>
         </section>
-        
+
         <section data-state='orange'>
             <section>
                 <h2 style="color: white">GUI</h2>
@@ -198,15 +198,13 @@
         <section data-title="How it works" class='left'>
             <section>
                 <p>
-                    Ein <span class="text-highlight">NodeJS</span> Server erlaubt es Bots, die in beliebiger Programmiersprache
-                    geschrieben sind, sich mit <span class="text-highlight">Websockets</span> zu verbinden und gegeneinander zu Jassen.
+                    A <span class="text-highlight">NodeJS</span> server allows bots, written in any language, to connect by websockets and play against eachother.
+                </p>
+                <p>
+                    The server communicates with the bots using a well defined <span class="text-highlight">protocol</span>.
                 </p>
             </section>
             <section>
-                <p>
-                   Der Server kommuniziert mit den Bots über das vordefinierte <span class="text-highlight">Protokoll</span>.
-                </p>
-
                 <p>Bot, what is your name?</p>
                 <pre class="no-shadow">
                 <code data-trim contenteditable>
@@ -279,20 +277,73 @@ server.listen(port, hostname, () => {
             </section>
         </section>
 
-        <section data-title="NPM" class='left'>
+        <section data-state='orange'>
             <section>
-                <h2>NPM</h2>
-                <p>
-                    The package manager for JavaScript.
-                </p>
+                <h2 style="color: white">About bots</h2>
+                <div class="zuehlke-center">
+                    <div class="zuehlke-splash-subtitle">what makes a bot smart?</div>
+                </div>
             </section>
         </section>
 
-        <section data-state='orange'>
+        <section data-title="Bots" class='left'>
             <section>
-                <h2 style="color: white">Writing Bots</h2>
-                <div class="zuehlke-splash-subtitle">Demo</div>
+                <h2>Bot skeletons</h2>
+                <p>
+                    There are bot skeletons ready to use in <span class="text-highlight">Java 8</span> and <span class="text-highlight">JavaScript</span>.
+                </p>
+                <p>They are not very smart, but they can play.</p>
             </section>
+            <section>
+                <h2>A stupid bot</h2>
+
+                <pre class="no-shadow" class="fragment" data-fragment-index="0">
+                <code data-trim contenteditable>
+function onRequestCard() {
+    let cardToPlay = this.getRandomCard();
+    this.api.playCard(cardToPlay);
+}
+                </code>
+            </pre>
+
+            </section>
+            <section>
+                <h2>How can we make him a bit smarter?</h2>
+                <ul>
+                    <li class="fragment" data-fragment-index="0">
+                        Choose a <span class="text-highlight">valid</span> card.
+                    </li>
+                    <li class="fragment" data-fragment-index="1">
+                        Keep track of the cards in the hand.
+                    </li>
+                </ul>
+
+                <pre class="no-shadow">
+                <code data-trim contenteditable class="fragment"  data-fragment-index="2">
+function onRequestCard() {
+    let handCard = this.giveValidCardFromHand();
+    this.handcards.splice(this.handcards.indexOf(handCard), 1);
+    this.client.send(handCard));
+}
+                </code>
+            </pre>
+            </section>
+
+            <section>
+                <h2>More stuff to consider</h2>
+                <ul>
+                    <li class="fragment" data-fragment-index="0">
+                        Creating rules/strategies for the different game modes <span class="text-highlight">Trumpf</span>, <span class="text-highlight">Obeabe</span>,
+                        <span class="text-highlight">Undeufe</span>, or if you want to <span class="text-highlight">Schiebe</span>
+                    </li>
+                    <li class="fragment" data-fragment-index="2">
+                        Your partner's needs.
+                    </li>
+                    <li class="fragment" data-fragment-index="3">
+                        Give your bot the ability to <span class="text-highlight">learn and improve</span>.
+                    </li>
+                </ul>
+                </section>
         </section>
 
         <section data-state='orange'>
